@@ -4,7 +4,9 @@ import Character from './Character';
 const CharacterList = props => {
     return(
         <ul className = "character-list">
-            {props.characters.map(character => 
+            {props.characters
+            .filter(character => character.name.toLowerCase().includes(props.search.toLowerCase()))
+            .map(character => 
                 <Character character = {character}/>
             )}
         </ul>

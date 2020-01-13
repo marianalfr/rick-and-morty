@@ -11,7 +11,14 @@ class App extends React.Component {
     this.state = {
       data: [],
       search: ''
-    }
+    };
+    this.getSearch = this.getSearch.bind(this);
+  }
+
+  getSearch(value){
+    this.setState({
+      search: value
+    })
   }
 
   componentDidMount(){
@@ -24,16 +31,17 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.data)
     return (
       <div className="App">
         <Header/>
         <main className="main">
           <Search
+            getSearch = {this.getSearch}
             search = {this.state.search}
           />
           <CharacterList
             characters = {this.state.data}
+            search = {this.state.search}
           />
         </main>
       </div>
