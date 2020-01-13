@@ -9,7 +9,7 @@ const Search = props => {
 
     return(
         <form>
-            <label for="search">Character search:</label>
+            <label htmlFor="search">Character search:</label>
             <input type="text" id="search" value={props.value} onChange={getSearch}/>
         </form>
     );
