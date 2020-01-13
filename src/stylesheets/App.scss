@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+/* vendors*/
+@import 'vendors/normalize';
+
+/* core */
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/functions';
+
+/* components */
+@import 'components/forms';
+
+/*layout*/
+@import 'layout/base';
+@import 'layout/header';
+
+/*pages*/
+@import 'pages/home';
+
+
