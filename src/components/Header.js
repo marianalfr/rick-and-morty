@@ -5,6 +5,6 @@ const Header = () => {
         <h1>Rick and Morty</h1>
         //<img src="../images/Rick-and-Morty-logo.png" alt="Rick and Morty Logo"/>
     );
-}
+};
 
 export default Header;

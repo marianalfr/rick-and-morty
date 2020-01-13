@@ -4,6 +4,8 @@ import { fetchCharacters } from '../services/Api'
 import Header from './Header';
 import Search from './Search';
 import CharacterList from './CharacterList';
+import { Switch, Route } from 'react-router-dom';
+import CharacterDetails from './CharacterDetails';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,21 +15,30 @@ class App extends React.Component {
       search: ''
     };
     this.getSearch = this.getSearch.bind(this);
-  }
-
-  getSearch(value){
-    this.setState({
-      search: value
-    })
-  }
+    this.renderCharacterDetails = this.renderCharacterDetails.bind(this);
+  };
 
   componentDidMount(){
     fetchCharacters()
     .then(data => {
       this.setState({
         data: data.results
-      })
-    })
+      });
+    });
+  };
+
+  getSearch(value){
+    this.setState({
+      search: value
+    });
+  };
+
+  renderCharacterDetails(props){
+    const characterId = props.match.params.id;
+    const character = this.state.data.find(character => character.id === parseInt(characterId));
+    return(
+      <CharacterDetails character={character}/>
+    )
   }
 
   render() {
@@ -35,14 +46,20 @@ class App extends React.Component {
       <div className="App">
         <Header/>
         <main className="main">
-          <Search
-            getSearch = {this.getSearch}
-            search = {this.state.search}
-          />
-          <CharacterList
-            characters = {this.state.data}
-            search = {this.state.search}
-          />
+          <Switch>
+            <Route exact path="/">
+              <Search
+                getSearch = {this.getSearch}
+                search = {this.state.search}
+              />
+              <CharacterList
+                characters = {this.state.data}
+                search = {this.state.search}
+              />
+            </Route>
+            <Route path="/character/:id" render={this.renderCharacterDetails}/>
+          </Switch>
+          
         </main>
       </div>
     );
