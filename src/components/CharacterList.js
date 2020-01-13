@@ -1,5 +1,6 @@
 import React from 'react';
 import Character from './Character';
+import PropTypes from 'prop-types';
 
 const CharacterList = props => {
     return(
@@ -11,6 +12,10 @@ const CharacterList = props => {
             )}
         </ul>
     );
+};
+
+Character.propTypes = {
+    characters: PropTypes.array
 };
 
 export default CharacterList;

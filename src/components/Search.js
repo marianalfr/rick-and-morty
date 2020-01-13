@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Search = props => {
 
@@ -10,9 +11,13 @@ const Search = props => {
     return(
         <form>
             <label htmlFor="search">Character search:</label>
-            <input type="text" id="search" value={props.value} onChange={getSearch}/>
+            <input type="text" id="search" value={props.search} onChange={getSearch}/>
         </form>
     );
+};
+
+Search.propTypes = {
+    search: PropTypes.string
 };
 
 export default Search;
