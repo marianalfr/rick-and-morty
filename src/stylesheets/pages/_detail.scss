@@ -57,6 +57,10 @@
         img.nav-logo{
             width: 40px;
             margin: 0 20px;
+            animation-name: rotate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
     }
 }
@@ -70,5 +74,9 @@
     img{
         width: 150px;
         margin: 20px auto;
+        animation-name: rotate;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 }
