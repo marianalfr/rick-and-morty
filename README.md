@@ -1,4 +1,4 @@
-#Rick and Morty
+# Rick and Morty
 
 Ejercicio para la evaluación final del tercer módulo de Adalab. Consiste en desarrollar una página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje. Vamos a usar React para realizarlo.
 Vamos de definir las distintas partes del ejercicio:
