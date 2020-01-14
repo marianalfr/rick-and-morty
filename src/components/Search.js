@@ -11,7 +11,7 @@ const Search = props => {
     return(
         <form className="search-form">
             <label className="search-form__label" htmlFor="search">Character search:</label>
-            <input className="search-form__search" type="text" id="search" value={props.search} onChange={getSearch}/>
+            <input className="search-form__search" type="text" id="search" placeholder="Annie" value={props.search} onChange={getSearch}/>
         </form>
     );
 };
