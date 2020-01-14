@@ -67,9 +67,14 @@
 
 .not-found{
     color: $color-portal;
-    width: 100%;
+    width: 180px;
     text-align: center;
     margin: 60px auto;
+
+    @include media (360px){
+        width: 300px;
+        width: 100%;
+    }
 
     img{
         width: 150px;
