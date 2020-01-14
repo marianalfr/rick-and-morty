@@ -6,6 +6,10 @@
     height: 150px;
 
     img{
-        height: 120px;
+        height: 90px;
+
+        @include media(400px){
+            height: 120px;
+        }
     }
 }

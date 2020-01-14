@@ -44,23 +44,25 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header/>
-        <main className="main">
-          <Switch>
-            <Route exact path="/">
-              <Search
-                getSearch = {this.getSearch}
-                search = {this.state.search}
-              />
-              <CharacterList
-                characters = {this.state.data}
-                search = {this.state.search}
-              />
-            </Route>
-            <Route path="/character/:id" render={this.renderCharacterDetails}/>
-          </Switch>
-          
-        </main>
+        <wrapper className="App__wrapper">
+          <Header/>
+          <main className="main">
+            <Switch>
+              <Route exact path="/">
+                <Search
+                  getSearch = {this.getSearch}
+                  search = {this.state.search}
+                />
+                <CharacterList
+                  characters = {this.state.data}
+                  search = {this.state.search}
+                />
+              </Route>
+              <Route path="/character/:id" render={this.renderCharacterDetails}/>
+            </Switch>
+            
+          </main>
+        </wrapper>
       </div>
     );
   };

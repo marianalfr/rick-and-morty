@@ -8,6 +8,7 @@
 @import 'core/functions';
 
 /* components */
+@import 'components/animations';
 @import 'components/forms';
 
 /*layout*/
@@ -16,5 +17,6 @@
 
 /*pages*/
 @import 'pages/home';
+@import 'pages/detail';
 
 
