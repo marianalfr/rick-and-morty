@@ -2,7 +2,7 @@ import React from 'react';
 import Emoji from './Emoji';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Portal from '../images/Rick-and-Morty-Portal.png'
+import Portal from '../images/Portal.png'
 
 const CharacterDetails = props => {
     if(props.character === undefined){
