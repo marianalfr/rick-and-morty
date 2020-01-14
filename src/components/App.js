@@ -44,6 +44,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
         <wrapper className="App__wrapper">
           <Header/>
           <main className="main">
